@@ -130,7 +130,7 @@ rsx! {
         onsubmit: move |evt| {
             // Prevent the default form submission navigation
             evt.prevent_default();
-            values.set(evt.values());
+            values.set(evt.values().into_iter().collect());
         },
 
         label { for: "username", "Username" }
