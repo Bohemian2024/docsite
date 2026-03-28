@@ -279,7 +279,7 @@ Event Handlers can either be synchronous or asynchronous. Dioxus automatically c
 rsx! {
     button {
         onclick: move |evt| async move {
-            let res = reqwest::get("https://dog.ceo/api/breeds/image/random/")
+            let res = reqwest::get("https://dog.ceo/api/breeds/image/random")
                 .await
                 .unwrap()
                 .json::<DogApi>()
